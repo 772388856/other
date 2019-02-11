@@ -52,7 +52,13 @@ var server = require('http').createServer(function (req, res) {
         case 'www.darlings.space':
 			proxy.web(req, res, { target: 'http://localhost:4000' });
 			break;
-        // 小说 end
+		// 小说 end
+		
+		// 其他 start
+		case 'o.myhi.fun':
+			proxy.web(req, res, { target: 'http://localhost:5000' });
+			break;
+        // 其他 end
 
 		default:
 			res.writeHead(200, {
